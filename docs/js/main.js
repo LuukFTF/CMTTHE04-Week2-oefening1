@@ -11,14 +11,32 @@ var Bubble = (function () {
 }());
 var Fish = (function () {
     function Fish() {
+        var _this = this;
+        this.element = document.createElement("fish");
+        var game = document.getElementsByTagName("game")[0];
+        game.appendChild(this.element);
+        this.element.addEventListener("click", function () { return _this.kill(); });
         console.log("Fish was created!");
-        this.killFish();
     }
-    Fish.prototype.killFish = function () {
+    Fish.prototype.kill = function () {
         console.log("Aargh!");
+    };
+    Fish.prototype.move = function () {
+        this.posx = Math.random() * window.innerWidth;
+        this.posy = Math.random() * window.innerHeight;
+        this.element.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
+    };
+    Fish.prototype.changeColor = function () {
+        this.huedeg = Math.random() * 360;
+        this.element.style.filter = "hue-rotate(" + this.huedeg + "deg)";
     };
     return Fish;
 }());
+for (var i = 0; i < 100; i++) {
+    var fish = new Fish();
+    fish.changeColor();
+    fish.move();
+}
 var Game = (function () {
     function Game() {
         console.log("Game was created!");
