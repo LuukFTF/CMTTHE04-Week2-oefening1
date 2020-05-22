@@ -1,11 +1,10 @@
-class Fish {
-    name : string = "fish"
+class Shark {
+    name : string = "shark"
     element : HTMLElement
     posx : number
     posy : number
     huedeg : number
-
-
+    
     constructor() {
         this.element = document.createElement(this.name)
         
@@ -20,13 +19,13 @@ class Fish {
         console.log(this.name + " created")
     }
 
-
     click() {
         this.kill()
     }
 
+    
     kill() {
-        this.element.classList.add("dead")
+        this.element.remove()
     }
 
     initLocation(){
@@ -39,4 +38,5 @@ class Fish {
         this.huedeg = Math.random() * 360
         this.element.style.filter = `hue-rotate(${this.huedeg}deg)`
     }
+}
 }

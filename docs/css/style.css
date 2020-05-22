@@ -20,6 +20,13 @@ fish {
     cursor: pointer;
 }
 
+shark {
+    background-image: url(../images/shark.png);
+    width:320px; height: 190px;
+    filter: hue-rotate(90deg);
+    cursor: pointer;
+}
+
 .dead {
     background-image: url(../images/bones.png);
 }
