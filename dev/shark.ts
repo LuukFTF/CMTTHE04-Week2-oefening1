@@ -39,4 +39,3 @@ class Shark {
         this.element.style.filter = `hue-rotate(${this.huedeg}deg)`
     }
 }
-}
