@@ -17,8 +17,8 @@ var Bubble = (function () {
         this.element.remove();
     };
     Bubble.prototype.initLocation = function () {
-        this.posx = Math.random() * window.innerWidth;
-        this.posy = Math.random() * window.innerHeight;
+        this.posx = Math.random() * (window.innerWidth - this.element.clientWidth);
+        this.posy = Math.random() * (window.innerHeight - this.element.clientHeight);
         this.element.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
     };
     return Bubble;
@@ -42,8 +42,8 @@ var Fish = (function () {
         this.element.classList.add("dead");
     };
     Fish.prototype.initLocation = function () {
-        this.posx = Math.random() * window.innerWidth;
-        this.posy = Math.random() * window.innerHeight;
+        this.posx = Math.random() * (window.innerWidth - this.element.clientWidth);
+        this.posy = Math.random() * (window.innerHeight - this.element.clientHeight);
         this.element.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
     };
     Fish.prototype.initColor = function () {
@@ -87,8 +87,8 @@ var Shark = (function () {
         this.element.remove();
     };
     Shark.prototype.initLocation = function () {
-        this.posx = Math.random() * window.innerWidth;
-        this.posy = Math.random() * window.innerHeight;
+        this.posx = Math.random() * (window.innerWidth - this.element.clientWidth);
+        this.posy = Math.random() * (window.innerHeight - this.element.clientHeight);
         this.element.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
     };
     Shark.prototype.initColor = function () {

@@ -29,8 +29,8 @@ class Shark {
     }
 
     initLocation(){
-        this.posx = Math.random() * window.innerWidth
-        this.posy = Math.random() * window.innerHeight
+        this.posx = Math.random() * (window.innerWidth - this.element.clientWidth)
+        this.posy = Math.random() * (window.innerHeight - this.element.clientHeight)
         this.element.style.transform = `translate(${this.posx}px, ${this.posy}px)`
     }
 
